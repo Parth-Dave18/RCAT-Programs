@@ -5,6 +5,8 @@ import java.awt.event.*;
 import javax.swing.*;
 public class ExamSystem{
     JFrame home;
+    JFrame createTestFrame;
+    JFrame giveTestFrame;
     JButton createTest, giveTest;
     
     ExamSystem(){
@@ -18,20 +20,20 @@ public class ExamSystem{
         
         createTest.setBounds(100,600,150,50);
         createTest.addActionListener((ActionEvent e)->{
-            action();
+            action(e);
         });
         home.add(createTest);
         
         giveTest.setBounds(430,600,150,50);
         giveTest.addActionListener((ActionEvent e)->{
-            action();
+            action(e);
         });
         home.add(giveTest);
        
     }
     
-    public void action(){
-        
+    public void action(ActionEvent e){
+        if(e.getSource())
     }
     public static void main(String[] args) {
         new ExamSystem();
